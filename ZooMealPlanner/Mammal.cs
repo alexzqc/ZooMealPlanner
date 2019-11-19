@@ -4,7 +4,14 @@ using System.Text;
 
 namespace ZooMealPlanner
 {
-    class Mammal
+    public class Mammal
     {
+        public string Mam1;
+        public string Mam2;
+        public Mammal() {
+            this.Mam1 = "Bear";
+            this.Mam2 = "Monkey";
+        }
+        
     }
 }
