@@ -9,8 +9,8 @@ namespace ZooMealPlanner
         public string Mam1;
         public string Mam2;
         public Mammal() {
-            this.Mam1 = "Bear";
-            this.Mam2 = "Monkey";
+            this.Mam1 = "Monkey";
+            this.Mam2 = "Bear";
         }
         
     }
