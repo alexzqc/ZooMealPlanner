@@ -6,6 +6,8 @@ namespace ZooMealPlanner
 {
     class Menu
     {
+
+        //pre-defined parameters
         public int sel1 = 0;
         public int sel2 = 0;
         public double oprand = 0;
@@ -23,12 +25,9 @@ namespace ZooMealPlanner
                 Console.WriteLine();
                 Console.WriteLine("Selection:");
 
-                sel1 = Convert.ToInt32(Console.ReadLine());
+                sel1 = Convert.ToInt32(Console.ReadLine());//get first selection here
 
-                if(sel1 == 3)
-                {
-                    break;
-                }else if(sel1 !=1&& sel1 != 2)
+                if(sel1 !=1&& sel1 != 2&& sel1 != 3)//validator
                 {
                     Console.WriteLine("Invalid Input");
                     ShowMain();
@@ -37,9 +36,9 @@ namespace ZooMealPlanner
             }
         }
 
-        public void showNext(int selection)
+        public void showNext(int selection)//second-level menu,get value from previous menu sel1
         {
-            while (selection ==1 || selection ==2)
+            while (selection ==1 || selection ==2)//loop if and only if sel1 = 1or2
             {
                 if (selection == 1)
                 {
@@ -59,14 +58,11 @@ namespace ZooMealPlanner
                     Console.WriteLine("2. Polar");
                 }
 
-
-
-
                 Console.WriteLine();
                 Console.WriteLine("Selection:");
                 sel2 = Convert.ToInt32(Console.ReadLine());
 
-                if (selection == 1)
+                if (selection == 1)//if monkey selected but sel2 is beyond 1,2 or 3
                 {
                     if (sel2 != 1 && sel2 != 2 && sel2 != 3)
                     {
@@ -75,7 +71,7 @@ namespace ZooMealPlanner
                     }
                 }
                 else
-                if(selection == 2)
+                if(selection == 2)//if bear is selected but sel2 is beyond 1 or 2
                 {
                     if (sel2 != 1 && sel2 != 2 )
                     {
@@ -86,12 +82,12 @@ namespace ZooMealPlanner
                 }
                     Console.WriteLine("Weight in KG:");
                     oprand = Convert.ToDouble(Console.ReadLine());
-                    if(oprand <= 0)
+                    if(oprand <= 0) //if input weight is not a positive number
                     {
                         Console.WriteLine("Invalid Input");
                         ShowMain();
                     }
-                        selection = 0;
+                        selection = 0;//clear selection and jump out of the loop
                 
             }
         }
