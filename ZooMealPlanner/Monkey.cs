@@ -6,14 +6,11 @@ namespace ZooMealPlanner
 {
     class Monkey: Mammal
     {
-        public string Mon1;
-        public string Mon2;
-        public string Mon3;
-        public Monkey()
+        public Monkey(double servingRatio, string species) : base(servingRatio, species)
         {
-            Mon1 = "Squirrel";
-            Mon2 = "Howler";
-            Mon3 = "Colobus";
+            FoodPreference = "fresh fruit, vegetables, nuts, insects, berries";
+            FeedTime = "9AM, 12PM and 5PM";
+            Type = "Monkey";
         }
     }
 }

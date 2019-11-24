@@ -6,12 +6,11 @@ namespace ZooMealPlanner
 {
     class Bears: Mammal
     {
-        public string Bea1;
-        public string Bea2;
-        public Bears()
+        public Bears(string foodPreference, double servingRatio, string species) : base(servingRatio, species)
         {
-            Bea1 = "Black";
-            Bea2 = "Polar";
+            FoodPreference = foodPreference;
+            Type = "Bear";
+            FeedTime = "9AM and 3PM";
         }
     }
 }
